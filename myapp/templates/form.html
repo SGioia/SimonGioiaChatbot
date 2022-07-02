@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html dir="ltr" lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Simon Gioia">
+<meta name="description" content="SuperBot">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="icon" href="images/favicon.ico">
+
+<title> SuperBot </title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+
+<hr><hr>
+<h1>Welcome to SuperBot - Your intelligent trip booking chatbot service.</h1>
+<p></p>
+<hr><hr>
+    <div class="menu">
+        <nav>
+            <table style="width:100%">
+                <tr>
+                    <th>|</th>
+                    <th><a href="#">HOME</a></th>
+                    <th>|</th>
+                    <th><a href="#">FAQ</a></th>
+                    <th>|</th>
+                    <th><a href="#">ABOUT</a></th>
+                    <th>|</th>
+                    <th><a href="#">CONTACT</a></th>
+                    <th>|</th>
+                </tr>
+            </table>
+        </nav>
+    </div>
+<hr><hr>
+<br>
+
+ <form method="post">
+  {% csrf_token %}
+  {{form}}
+  <button type="submit">Ask SuperBot</button>
+ </form>
+
+</body>
+</html>
